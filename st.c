@@ -2011,7 +2011,7 @@ csihandle(void)
 		case 6: /* Report Cursor Position (CPR) "<row>;<column>R" */
 			n = snprintf(buf, sizeof(buf), "\033[%i;%iR",
 			               term.c.y+1, term.c.x+1);
-			ttywrite(buf, len, 0);
+			ttywrite(buf, n, 0);
 			break;
 		default:
 			goto unknown;
