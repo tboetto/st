@@ -6,6 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "mono:pixelsize=36:antialias=true:autohint=true";
+static char *font2[] = { "NotoColorEmoji:pixelsize=32:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
@@ -184,6 +185,7 @@ const unsigned int mousescrollincrement = 2;
  */
 ResourcePref resources[] = {
 		{ "font",         STRING,  &font },
+    { "fontalt0",     STRING,  &font2[0] },
 		{ "color0",       STRING,  &colorname[0] },
 		{ "color1",       STRING,  &colorname[1] },
 		{ "color2",       STRING,  &colorname[2] },
